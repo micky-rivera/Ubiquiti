@@ -1,0 +1,27 @@
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #f6f6f8;
+    border-bottom: 1px solid #ededf0
+}
+
+.header__logo {
+    width: 60px;
+}
+
+.header__title {
+    color: #838691;
+    margin-left: 1rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.header__name {
+    flex: 1;
+    text-align: right;
+    margin-right: 1.5rem;
+    color: #565657;
+    font-weight: bold;
+    font-size: 0.9rem;
+}

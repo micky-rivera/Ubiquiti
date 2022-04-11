@@ -3,8 +3,9 @@ import React from 'react';
 function Header() {
   return (
     <div className="header">
-        <p>Ubiquiti logo</p>
-        <p>Micky Rivera</p>
+        <img className='header__logo' src={require('../UI_logo.png')} />
+        <p className='header__title'>Devices</p>
+        <p className='header__name'>Micky Rivera</p>
     </div>
   );
 }

@@ -11,13 +11,19 @@ app.get('/api/all', (req,res) => {
     .then(data => {
         const allProducts = [];
         data.devices.forEach(device => {
+            let productLine;
+            if (device.line.name === 'Unknown') {
+                productLine = device.product.name.split(' ')[0];
+            } else {
+                productLine = device.line.name
+            }
             allProducts.push({
-                line: device.line.name,
+                line: productLine,
                 name: device.product.name
             });
         })
         shortenedList = allProducts.slice(0, 11);
-        return res.json(shortenedList);
+        return res.json(allProducts);
     })
 })
 

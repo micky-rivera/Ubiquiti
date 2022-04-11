@@ -32,7 +32,9 @@ function List() {
 
     return (
         <div className="list">
-            <h2>all products:</h2>
+            <p className='list__header--count'>{state.productList?.length || ''} devices</p>
+            <h4 className='list__header--line'>PRODUCT LINE</h4>
+            <h4 className='list__header--name'>NAME</h4>
             {products.map((product, index) => (
                 <ListItem key={index} name={product.name} line={product.line} />
             ))}

@@ -17,27 +17,15 @@
     width: 220px;
     color: #878788;
     height: 30px;
-    padding-left: 3px;
-}
-
-.search-form__btn {
-    background-color: #f6f6f8;
-    color: #f6f6f8;
+    padding-left: 25px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    height: 30px;
-    width: 20px;
-}
-
-.search-form__btn:hover {
-    background-color: #e6e6e6;
-    color: #e6e6e6;
 }
 
 svg {
     position: absolute;
     margin-top: 18px;
-    margin-left: 35px;
+    margin-left: 38px;
     z-index: 1;
     pointer-events: none;
 }

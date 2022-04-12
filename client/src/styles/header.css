@@ -13,7 +13,6 @@
 .header__title {
     color: #838691;
     margin-left: 1rem;
-    font-weight: 700;
     font-size: 1.1rem;
 }
 
@@ -22,6 +21,5 @@
     text-align: right;
     margin-right: 1.5rem;
     color: #565657;
-    font-weight: bold;
     font-size: 0.9rem;
 }

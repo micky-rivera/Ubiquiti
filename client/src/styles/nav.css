@@ -17,15 +17,15 @@
     width: 20rem;
     color: #878788;
     height: 30px;
-    padding-left: 25px;
+    padding-left: 2rem;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
 
 .search-form__svg {
     position: absolute;
-    margin-top: 18px;
-    margin-left: 38px;
+    top: 0.9rem;
+    left: 2.5rem;
     z-index: 1;
     pointer-events: none;
 }

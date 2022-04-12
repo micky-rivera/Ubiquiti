@@ -12,6 +12,8 @@
     flex: 65%;
     border-bottom: 1px solid #ededf8;
     padding-top: 0.5rem;
+    color: #595959;
+
 }
 
 .list__item--line {
@@ -20,6 +22,8 @@
     padding-left: 50px;
     height: 2.3rem;
     padding-top: 0.5rem;
+    color: #595959;
+
 }
 
 .list__item--img {
@@ -42,9 +46,12 @@
     border-bottom: 1px solid #ededf8;
     flex-basis: 25%;
     padding-left: 50px;
+    color: #595959;
 }
 
 .list__header--name {
     border-bottom: 1px solid #ededf8;
     flex: 65%;
+    color: #595959;
+
 }

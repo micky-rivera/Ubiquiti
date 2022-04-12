@@ -14,7 +14,7 @@
 .search-form__input {
     outline: none;
     background-color: #f6f6f8;
-    width: 220px;
+    width: 20rem;
     color: #878788;
     height: 30px;
     padding-left: 25px;
@@ -22,7 +22,7 @@
     border-bottom-left-radius: 5px;
 }
 
-svg {
+.search-form__svg {
     position: absolute;
     margin-top: 18px;
     margin-left: 38px;
@@ -38,8 +38,67 @@ svg {
     height: 30px;
     width: 30px;
     position: absolute;
+    cursor: pointer;
 }
 
 .search-form__clear-btn:hover {
     background-color: #e6e6e6;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    width: fit-content;
+    position: absolute;
+    right: 20px;
+    top: 14px;
+}
+
+.grid-btn {
+    padding-top: 2px;
+    width: fit-content;
+    text-align: right;
+    padding-right: 8px;
+    padding-left: 8px;
+}
+
+.grid-btn__svg {
+    cursor: pointer;
+    width: 23px;
+    height: 23px;
+}
+
+.grid-btn__svg:hover {
+    background-color: #f6f6f8;
+    border-radius: 3px;
+}
+
+.filter-btn {
+    padding-top: 2px;
+    width: fit-content;
+    padding-right: 8px;
+    padding-left: 8px;
+    color: #878788;
+}
+
+.filter-btn:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.list-btn {
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-top: 2px;
+}
+
+.list-btn__svg {
+    cursor: pointer;
+    width: 23px;
+    height: 23px;
+}
+
+.list-btn__svg:hover {
+    background-color: #f6f6f8;
+    border-radius: 3px;
 }

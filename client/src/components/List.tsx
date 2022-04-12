@@ -8,7 +8,7 @@ let allProducts: any;
 function List() {
     const dispatch = useAppDispatch();
     const state = useAppSelector(store => store.app);
-    const products = state.productList || [{name: '', line: ''}];
+    const products = state.productList || [{name: '', line: '', deviceId: ''}];
 
     const parseData = (data: any) => {
         if (state.search.length > 0) {
@@ -36,7 +36,7 @@ function List() {
             <h4 className='list__header--line'>PRODUCT LINE</h4>
             <h4 className='list__header--name'>NAME</h4>
             {products.map((product, index) => (
-                <ListItem key={index} name={product.name} line={product.line} />
+                <ListItem key={index} name={product.name} line={product.line} deviceId={product.deviceId} />
             ))}
         </div>
     );

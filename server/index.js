@@ -19,7 +19,8 @@ app.get('/api/all', (req,res) => {
             }
             allProducts.push({
                 line: productLine,
-                name: device.product.name
+                name: device.product.name,
+                deviceId: device.icon.id
             });
         })
         shortenedList = allProducts.slice(0, 11);

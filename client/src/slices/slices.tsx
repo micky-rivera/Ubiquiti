@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 const initialState = {
     search: '',
-    productList: [{name: '', line: ''}]
+    productList: [{name: '', line: '', deviceId: ''}]
 }
 
 export const gameSlice = createSlice({

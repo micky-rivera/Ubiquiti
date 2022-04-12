@@ -2,5 +2,6 @@
 
 interface ListItemProps {
     name: string,
-    line: string
+    line: string,
+    deviceId: string
 }

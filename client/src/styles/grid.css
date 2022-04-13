@@ -34,6 +34,7 @@
     border-top-right-radius: 0.5rem;
     height: 8.3rem;
     user-select: none;
+    overflow: hidden;
 }
 
 .grid-item__name {

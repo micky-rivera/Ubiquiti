@@ -12,7 +12,11 @@ function List() {
     const products = state.productList || [{name: '', line: '', deviceId: ''}];
 
     const parseData = (data: any) => {
-        if (state.search.length > 0) {
+        if (state.search.length > 0 || state.filters.length > 0) {
+            if (state.filters.length > 0) {
+                return data.filter((product: any) => product.name.toLowerCase().includes(state.search.toLowerCase()))
+                .filter((product: any) => state.filters.includes(product.line)); // need to make this case insensitive!
+            }
             return data.filter((product: any) => product.name.toLowerCase().includes(state.search.toLowerCase()));
         }
         return data;
@@ -30,6 +34,10 @@ function List() {
     useEffect(() => {
         dispatch(setList(parseData(allProducts)));
     }, [state.search])
+    
+    useEffect(() => {
+        dispatch(setList(parseData(allProducts)));
+    }, [state.filters])
 
     return (
         <>

@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-const initialState = {
+const initialState: AppState = {
   search: '',
   productList: [{name: '', line: '', deviceId: ''}],
   format: 'list',
@@ -13,7 +13,8 @@ const initialState = {
     maxPower: '',
     speed: '',
     numOfPorts: '',
-  }
+  },
+  filters: []
 }
 
 export const gameSlice = createSlice({
@@ -25,7 +26,8 @@ export const gameSlice = createSlice({
         search: state.search,
         productList: action.payload,
         format: state.format,
-        chosenProduct: state.chosenProduct
+        chosenProduct: state.chosenProduct,
+        filters: state.filters
       };
     },
     setSearch: (state, action) => {
@@ -33,7 +35,8 @@ export const gameSlice = createSlice({
         search: action.payload,
         productList: state.productList,
         format: state.format,
-        chosenProduct: state.chosenProduct
+        chosenProduct: state.chosenProduct,
+        filters: state.filters,
       };
     },
     setFormat: (state, action) => {
@@ -41,7 +44,8 @@ export const gameSlice = createSlice({
         search: state.search,
         productList: state.productList,
         format: action.payload,
-        chosenProduct: state.chosenProduct
+        chosenProduct: state.chosenProduct,
+        filters: state.filters,
       };
     },
     setChosenProduct: (state, action) => {
@@ -49,7 +53,17 @@ export const gameSlice = createSlice({
         search: state.search,
         productList: state.productList,
         format: state.format,
-        chosenProduct: action.payload
+        chosenProduct: action.payload,
+        filters: state.filters,
+      };
+    },
+    setFilters: (state, action) => {
+      return {
+        search: state.search,
+        productList: state.productList,
+        format: state.format,
+        chosenProduct: state.chosenProduct,
+        filters: action.payload,
       };
     },
   },
@@ -59,6 +73,7 @@ export const {
   setList,
   setSearch,
   setFormat,
-  setChosenProduct
+  setChosenProduct,
+  setFilters
 } = gameSlice.actions;
 export default gameSlice.reducer;

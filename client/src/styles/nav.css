@@ -39,6 +39,7 @@
     width: 30px;
     position: absolute;
     cursor: pointer;
+    user-select: none;
 }
 
 .search-form__clear-btn:hover {
@@ -79,6 +80,7 @@
     padding-right: 8px;
     padding-left: 8px;
     color: #878788;
+    user-select: none;
 }
 
 .filter-btn:hover {

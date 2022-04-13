@@ -7,51 +7,57 @@
     align-items: center;
 }
 
-.list__item--name {
-    height: 2.3rem;
-    flex: 65%;
+.list-item {
+    flex-basis: 100%;
+    display: flex;
+    flex-wrap: wrap;
     border-bottom: 1px solid #ededf8;
+    height: 2.3rem;
+}
+
+.list-item__name {
+    flex: 55%;
     padding-top: 0.5rem;
     color: #595959;
 
 }
 
-.list__item--line {
+.list-item__line {
     flex-basis: 25%;
-    border-bottom: 1px solid #ededf8;
     padding-left: 50px;
-    height: 2.3rem;
     padding-top: 0.5rem;
     color: #595959;
 
 }
 
-.list__item--img {
-    flex-basis: 8%;
-    border-bottom: 1px solid #ededf8;
+.list-item__img {
+    flex-basis: 10%;
     text-align: right;
-    height: 2.3rem;
     padding-top: 0.5rem;
-    padding-right: 1rem;
+    padding-right: 0.5rem;
 }
 
-.list__header--count {
+.list-header {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
     border-bottom: 1px solid #ededf8;
-    flex-basis: 8%;
+}
+
+.list-header__count {
+    flex-basis: 10%;
     text-align: right;
     color: #bdbdbd;
 }
 
-.list__header--line {
-    border-bottom: 1px solid #ededf8;
+.list-header__line {
     flex-basis: 25%;
     padding-left: 50px;
     color: #595959;
 }
 
-.list__header--name {
-    border-bottom: 1px solid #ededf8;
-    flex: 65%;
+.list-header__name {
+    flex: 55%;
     color: #595959;
-
 }

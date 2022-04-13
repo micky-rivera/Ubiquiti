@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './components/Header';
-import List from './components/List';
+import ProductDisplay from './components/ProductDisplay';
 import Form from './components/Form';
 import Nav from './components/Nav';
 
@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <Header />
       <Nav />
-      <List />
+      <ProductDisplay />
     </div>
   );
 }

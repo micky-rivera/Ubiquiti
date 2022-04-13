@@ -1,6 +1,8 @@
 import React from 'react';
+import { useAppSelector } from '../hooks/hooks';
 
 function ListItem({name,line, deviceId}: ListItemProps) {
+  const state = useAppSelector(state => state.app);
 
   const resolution = '25x25';
 
@@ -8,11 +10,13 @@ function ListItem({name,line, deviceId}: ListItemProps) {
 
   return (
     <>
-      <div className='list__item--img'>
-        <img src={imageUrl} />
+      <div className={state.format === 'list' ? 'list-item' : 'hidden'}>
+        <div className='list-item__img'>
+          <img src={imageUrl} />
+        </div>
+        <p className='list-item__line'>{line}</p>
+        <p className='list-item__name'>{name}</p>
       </div>
-      <p className='list__item--line'>{line}</p>
-      <p className='list__item--name'>{name}</p>
     </>
   );
 }

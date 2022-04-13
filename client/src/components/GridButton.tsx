@@ -9,7 +9,6 @@ function GridButton() {
     const handleClick= () => {
         if (state.format === 'list') {
             dispatch(setFormat('grid'));
-            // also change local state for appearance?
         }
     }
 

@@ -32,19 +32,22 @@ function List() {
     }, [state.search])
 
     return (
-        <div className={state.format === 'list' ? 'list' : 'grid'}>
-            <div className={state.format === 'list' ? 'list-header' : 'hidden'}>
-                <p className='list-header__count'>{state.productList?.length || ''} devices</p>
-                <h4 className='list-header__line'>PRODUCT LINE</h4>
-                <h4 className='list-header__name'>NAME</h4>
+        <>
+            <div className={state.format === 'list' ? 'list' : 'grid'}>
+                <div className={state.format === 'list' ? 'list-header' : 'hidden'}>
+                    <p className='list-header__count'>{state.productList?.length || ''} devices</p>
+                    <h4 className='list-header__line'>PRODUCT LINE</h4>
+                    <h4 className='list-header__name'>NAME</h4>
+                </div>
+                <p className={state.format === 'grid' ? 'grid-header__count' : 'hidden'}>{state.productList?.length || ''} devices</p>
+                {products.map((product, index) => (
+                    <ListItem key={index} name={product.name} line={product.line} deviceId={product.deviceId} />
+                ))}
+                {products.map((product, index) => (
+                    <GridItem key={index} name={product.name} line={product.line} deviceId={product.deviceId} />
+                ))}
             </div>
-            {products.map((product, index) => (
-                <ListItem key={index} name={product.name} line={product.line} deviceId={product.deviceId} />
-            ))}
-            {products.map((product, index) => (
-                <GridItem key={index} name={product.name} line={product.line} deviceId={product.deviceId} />
-            ))}
-        </div>
+        </>
     );
 }
 

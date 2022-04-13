@@ -1,9 +1,18 @@
+
 .grid {
     margin: auto;
-    margin-top: 2rem;
+    margin-top: 1rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.grid-header__count {
+    width: 100%;
+    height: 1.5rem;
+    margin-left: 2rem;
+    color: #bdbdbd;
+    font-size: 0.8rem;
 }
 
 .grid-item {
@@ -14,12 +23,17 @@
     margin: 0.4rem;
 }
 
+.grid-item:hover {
+    border: 1px solid #838691; 
+}
+
 .grid-item__img {
     text-align: center;
     background-color: #f6f6f8;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
     height: 8.3rem;
+    user-select: none;
 }
 
 .grid-item__name {

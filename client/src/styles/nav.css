@@ -40,6 +40,8 @@
     position: absolute;
     cursor: pointer;
     user-select: none;
+    top: 0.61rem;
+    left: 22rem;
 }
 
 .search-form__clear-btn:hover {

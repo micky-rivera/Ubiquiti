@@ -1,18 +1,17 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState: AppState = {
   search: '',
-  productList: [{name: '', line: '', deviceId: ''}],
+  productList: [{name: '', line: '', deviceId: '', details: []}],
   format: 'list',
   chosenProduct: {
-    name: '',
-    line: '',
-    lineId: '',
-    deviceId: '',
-    shortName: '',
-    maxPower: '',
-    speed: '',
-    numOfPorts: '',
+    name: 'Access Point Wifi Something idk',
+    line: 'Ubiquiti Product',
+    deviceId: '06a25b40-ef1f-463a-82d9-13236866ea3d',
+    details: [{
+      label: 'price',
+      content: 'astronomic'
+    }]
   },
   filters: []
 }

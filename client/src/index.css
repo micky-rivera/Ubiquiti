@@ -3,6 +3,7 @@
 @import './styles/nav.css';
 @import './styles/grid.css';
 @import './styles/filter.css';
+@import './styles/productPage.css';
 
 * {
   margin: 0px;

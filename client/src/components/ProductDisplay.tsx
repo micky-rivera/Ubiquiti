@@ -9,7 +9,7 @@ let allProducts: any;
 function List() {
     const dispatch = useAppDispatch();
     const state = useAppSelector(store => store.app);
-    const products = state.productList || [{name: '', line: '', deviceId: ''}];
+    const products = state.productList || [{name: '', line: '', deviceId: '', details: []}];
 
     const parseData = (data: any) => {
         if (state.search.length > 0 || state.filters.length > 0) {
@@ -49,10 +49,10 @@ function List() {
                 </div>
                 <p className={state.format === 'grid' ? 'grid-header__count' : 'hidden'}>{state.productList?.length || '0'} devices</p>
                 {products.map((product, index) => (
-                    <ListItem key={index} name={product.name} line={product.line} deviceId={product.deviceId} />
+                    <ListItem key={index} name={product.name} line={product.line} deviceId={product.deviceId} details={product.details} />
                 ))}
                 {products.map((product, index) => (
-                    <GridItem key={index} name={product.name} line={product.line} deviceId={product.deviceId} />
+                    <GridItem key={index} name={product.name} line={product.line} deviceId={product.deviceId} details={product.details} />
                 ))}
             </div>
         </>

@@ -21,16 +21,7 @@ function App() {
         }/>
         <Route path='/product' element={
           <>
-            <ProductPage
-            name={state.chosenProduct.name}
-            shortName={state.chosenProduct.shortName}
-            line={state.chosenProduct.line}
-            lineId={state.chosenProduct.lineId}
-            deviceId={state.chosenProduct.deviceId}
-            maxPower={state.chosenProduct.maxPower}
-            speed={state.chosenProduct.speed}
-            numOfPorts={state.chosenProduct.numOfPorts}
-            />
+            <ProductPage />
           </>
         }/>
       </Routes>

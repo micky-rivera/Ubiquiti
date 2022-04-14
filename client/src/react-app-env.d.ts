@@ -1,35 +1,28 @@
 /// <reference types="react-scripts" />
 
-type AppState = {
-    search: string,
-  productList: [{name: string, line: string, deviceId: string}],
-  format: string,
-  chosenProduct: {
+type Detail = {
+    label: string,
+    content: string
+}
+
+type Product = {
     name: string,
     line: string,
-    lineId: string,
     deviceId: string,
-    shortName: string,
-    maxPower: string,
-    speed: string,
-    numOfPorts: string,
-  },
-  filters: string[]    
+    details: Detail[]
+}
+
+type AppState = {
+    search: string,
+    productList: Product[],
+    format: string,
+    chosenProduct: Product,
+    filters: string[]    
 }
 
 interface ListItemProps {
     name: string,
     line: string,
-    deviceId: string
-}
-
-interface ProductPageProps {
-    name: string,
-    shortName: string,
-    line: string,
-    lineId: string,
     deviceId: string,
-    maxPower: string,
-    speed: string,
-    numOfPorts: string,
+    details: Detail[]
 }

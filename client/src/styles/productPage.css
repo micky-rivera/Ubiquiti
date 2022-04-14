@@ -1,5 +1,33 @@
 .product-page {
-    border: 1px solid black;
     width: 90%;
     margin: auto;
+    margin-top: 6rem;
+    height: 25rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-page__img-container {
+    width: 23rem;
+    text-align: right;
+}
+
+.product-page__img {
+    height: 100%;
+}
+
+.product-page__info {
+    margin-top: 4rem;
+    width: 30rem;
+    padding: 1rem;
+}
+
+.product-page__row {
+    border-bottom: 1px solid #ededf0;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    color: #595959;
 }

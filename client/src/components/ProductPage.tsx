@@ -11,21 +11,25 @@ function ProductPage() {
   return (
     <>
       <div className='product-page'>
-          <img className='product-page__img' src={imageUrl} />
-          <div className='product-page__row'>
-                  <p className='product-page__label'>Name</p>
-                  <p className='product-page__content'>{state.chosenProduct.name}</p>
-            </div>
-          <div className='product-page__row'>
-                  <p className='product-page__label'>Product line</p>
-                  <p className='product-page__content'>{state.chosenProduct.line}</p>
-            </div>
-          {state.chosenProduct.details.map((detail, index) => (
-              <div key={index} className='product-page__row'>
-                  <p className='product-page__label'>{detail.label}</p>
-                  <p className='product-page__content'>{detail.content}</p>
-              </div>
-          ))}
+          <div className='product-page__img-container'>
+            <img className='product-page__img' src={imageUrl} />
+          </div>
+          <div className='product-page__info'>
+            <div className='product-page__row'>
+                    <p className='product-page__label'>Name</p>
+                    <p className='product-page__content'>{state.chosenProduct.name}</p>
+                </div>
+            <div className='product-page__row'>
+                    <p className='product-page__label'>Product line</p>
+                    <p className='product-page__content'>{state.chosenProduct.line}</p>
+                </div>
+            {state.chosenProduct.details.map((detail, index) => (
+                <div key={index} className='product-page__row'>
+                    <p className='product-page__label'>{detail.label}</p>
+                    <p className='product-page__content'>{detail.content}</p>
+                </div>
+            ))}
+          </div>
       </div>
     </>
   );

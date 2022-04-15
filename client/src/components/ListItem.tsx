@@ -30,8 +30,10 @@ function ListItem({name,line, deviceId, details}: ListItemProps) {
         <div className={state.format === 'list' ? 'list-item__img' : 'grid-item__img'}>
           <img src={imageUrl} />
         </div>
-        <p className={state.format === 'list' ? 'list-item__line' : 'grid-item__line'}>{line}</p>
-        <p className={state.format === 'list' ? 'list-item__name' : 'grid-item__name'}>{name}</p>
+        <p className={state.format === 'list' ? 'list-item__line' : 'hidden'}>{line}</p>
+        <p className={state.format === 'list' ? 'list-item__name' : 'hidden'}>{name}</p>
+        <p className={state.format === 'grid' ? 'grid-item__name' : 'hidden'}>{name}</p>
+        <p className={state.format === 'grid' ? 'grid-item__line' : 'hidden'}>{line}</p>
       </div>
     </>
   );

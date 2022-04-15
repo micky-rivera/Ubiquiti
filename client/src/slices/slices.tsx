@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState: AppState = {
   search: '',
-  productList: [{name: '', line: '', deviceId: '', details: []}],
+  productList: [{name: '', line: '', deviceId: '06a25b40-ef1f-463a-82d9-13236866ea3d', details: []}],
   format: 'list',
   chosenProduct: {
     name: 'Access Point Wifi Something idk',
@@ -20,6 +20,9 @@ export const gameSlice = createSlice({
   name: "appReducer",
   initialState,
   reducers: {
+    setState: (state, action) => {
+      return action.payload;
+    },
     setList: (state, action) => {
       return {
         search: state.search,
@@ -69,6 +72,7 @@ export const gameSlice = createSlice({
 });
 
 export const {
+  setState,
   setList,
   setSearch,
   setFormat,

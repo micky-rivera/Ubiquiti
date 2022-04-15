@@ -1,10 +1,23 @@
-import React, {useState} from 'react';
-import { useAppDispatch } from '../hooks/hooks';
+import React, {useEffect, useState} from 'react';
+import { useAppDispatch, useAppSelector } from '../hooks/hooks';
 import { setSearch } from '../slices/slices';
 
 const Form = () => {
+    const state = useAppSelector(state => state.app);
     const [userInput, setUserInput] = useState('');
     const dispatch = useAppDispatch();
+
+    useEffect(() => {
+        if (window.localStorage.search) {
+            const search = JSON.parse(window.localStorage.search);
+            setUserInput(search.term);
+            dispatch(setSearch(search.term));
+        }
+    }, [])
+
+    useEffect(() => {
+        window.localStorage.setItem('search', JSON.stringify({term: userInput}));
+    }, [userInput])
     
     const clearForm = () => {
         setUserInput('');

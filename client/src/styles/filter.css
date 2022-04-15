@@ -6,6 +6,7 @@
     box-shadow: 0rem 0rem 2rem #bdbdbd;
     top: -0.86rem;
     right: -1.25rem;
+    z-index: 2;
 }
 
 .filter-popup__header {

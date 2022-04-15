@@ -24,7 +24,7 @@
 }
 
 .list-item__name {
-    flex: 55%;
+    flex-basis: 55%;
     padding-top: 0.5rem;
     color: #595959;
 
@@ -66,6 +66,33 @@
 }
 
 .list-header__name {
-    flex: 55%;
+    flex-basis: 55%;
     color: #595959;
+}
+
+@media screen and (max-device-width: 650px) {
+    .list-header {
+        justify-content: space-evenly;
+    }
+    .list-item {
+        justify-content: space-evenly;
+        height: fit-content;
+    }
+    .list-header__count {
+        font-size:0.8rem;
+    }
+    .list-header__line {
+        flex-basis: 20%;
+        padding-left: 0px;
+    }
+    .list-item__line {
+        flex-basis: 20%;
+        padding-left: 0px;
+    }
+    .list-item__name {
+        flex-basis: 20%;
+    }
+    .list-header__name {
+        flex-basis: 20%;
+    }
 }

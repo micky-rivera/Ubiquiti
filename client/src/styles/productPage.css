@@ -58,3 +58,9 @@
     padding-bottom: 0.4rem;
     color: #595959;
 }
+
+@media screen and (max-device-width: 670px) {
+    .product-page {
+        margin-top: 2rem;
+    }
+}

@@ -12,15 +12,17 @@ function List() {
 
     const parseData = (data: any) => {
         let searchTerm = '';
+        let filters: string[] = [];
         if (window.localStorage.search) {
             searchTerm = JSON.parse(window.localStorage.search).term;
-        } else {
-            searchTerm = state.search;
         }
-        if (searchTerm.length > 0 || state.filters.length > 0) {
-            if (state.filters.length > 0) {
+        if (window.localStorage.filters) {
+            filters = JSON.parse(window.localStorage.filters).terms;
+        }
+        if (searchTerm.length > 0 || filters.length > 0) {
+            if (filters.length > 0) {
                 return data.filter((product: any) => product.name.toLowerCase().includes(searchTerm.toLowerCase()))
-                .filter((product: any) => state.filters.includes(product.line)); // need to make this case insensitive!
+                .filter((product: any) => filters.includes(product.line)); // need to make this case insensitive!
             }
             return data.filter((product: any) => product.name.toLowerCase().includes(searchTerm.toLowerCase()));
         }

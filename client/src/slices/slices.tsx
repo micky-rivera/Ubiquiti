@@ -20,18 +20,6 @@ export const gameSlice = createSlice({
   name: "appReducer",
   initialState,
   reducers: {
-    setState: (state, action) => {
-      return action.payload;
-    },
-    setList: (state, action) => {
-      return {
-        search: state.search,
-        productList: action.payload,
-        format: state.format,
-        chosenProduct: state.chosenProduct,
-        filters: state.filters
-      };
-    },
     setSearch: (state, action) => {
       return {
         search: action.payload,
@@ -72,8 +60,6 @@ export const gameSlice = createSlice({
 });
 
 export const {
-  setState,
-  setList,
   setSearch,
   setFormat,
   setChosenProduct,

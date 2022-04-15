@@ -8,6 +8,7 @@ function ListButton() {
 
     const handleClick = () => {
         if (state.format === 'grid') {
+            window.localStorage.setItem('format', JSON.stringify({type: 'list'}));
             dispatch(setFormat('list'));
         }
     }

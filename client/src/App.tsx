@@ -5,10 +5,17 @@ import Nav from './components/Nav';
 import { Routes, Route } from 'react-router-dom';
 import ProductPage from './components/ProductPage';
 import { useAppSelector, useAppDispatch } from './hooks/hooks';
+import { setFormat } from './slices/slices';
 
 function App() {
   const state = useAppSelector(state => state.app);
   const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    if (window.localStorage.format) {
+      dispatch(setFormat(JSON.parse(window.localStorage.format).type));
+    }
+  }, [])
 
   return (
     <div className="App">

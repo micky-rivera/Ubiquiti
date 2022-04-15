@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ListItem from './ListItem';
 import { useAppSelector, useAppDispatch } from '../hooks/hooks';
-import GridItem from './GridItem';
 
 let allProducts: any = [];
 
@@ -57,9 +56,6 @@ function List() {
                 <p className={state.format === 'grid' ? 'grid-header__count' : 'hidden'}>{products.length || '0'} devices</p>
                 {products.map((product, index) => (
                     <ListItem key={index} name={product.name} line={product.line} deviceId={product.deviceId} details={product.details} />
-                ))}
-                {products.map((product, index) => (
-                    <GridItem key={index} name={product.name} line={product.line} deviceId={product.deviceId} details={product.details} />
                 ))}
             </div>
         </>

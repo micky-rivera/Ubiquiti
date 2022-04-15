@@ -9,7 +9,7 @@ const Form = () => {
 
     useEffect(() => {
         if (window.localStorage.search) {
-            const search = JSON.parse(window.localStorage.search);
+            const search: {term:string} = JSON.parse(window.localStorage.search);
             setUserInput(search.term);
             dispatch(setSearch(search.term));
         }

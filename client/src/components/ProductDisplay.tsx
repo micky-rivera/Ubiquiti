@@ -2,14 +2,14 @@ import React, { useEffect, useState } from 'react';
 import ListItem from './ListItem';
 import { useAppSelector, useAppDispatch } from '../hooks/hooks';
 
-let allProducts: any = [];
+let allProducts: Product[] = [];
 
 function List() {
     const dispatch = useAppDispatch();
     const state = useAppSelector(store => store.app);
-    const [products, setproducts] = useState([{name: '', line: '', deviceId: '06a25b40-ef1f-463a-82d9-13236866ea3d', details: []}]);
+    const [products, setproducts] = useState<Product[]>([{name: '', line: '', deviceId: '06a25b40-ef1f-463a-82d9-13236866ea3d', details: []}]);
 
-    const parseData = (data: any) => {
+    const parseData = (data: Product[]) => {
         let searchTerm = '';
         let filters: string[] = [];
         if (window.localStorage.search) {
@@ -20,10 +20,10 @@ function List() {
         }
         if (searchTerm.length > 0 || filters.length > 0) {
             if (filters.length > 0) {
-                return data.filter((product: any) => product.name.toLowerCase().includes(searchTerm.toLowerCase()))
-                .filter((product: any) => filters.includes(product.line)); // need to make this case insensitive!
+                return data.filter((product: Product) => product.name.toLowerCase().includes(searchTerm.toLowerCase()))
+                .filter((product: Product) => filters.includes(product.line)); // need to make this case insensitive!
             }
-            return data.filter((product: any) => product.name.toLowerCase().includes(searchTerm.toLowerCase()));
+            return data.filter((product: Product) => product.name.toLowerCase().includes(searchTerm.toLowerCase()));
         }
         return data;
     }
@@ -54,7 +54,7 @@ function List() {
                     <h4 className='list-header__name'>NAME</h4>
                 </div>
                 <p className={state.format === 'grid' ? 'grid-header__count' : 'hidden'}>{products.length || '0'} devices</p>
-                {products.map((product, index) => (
+                {products.map((product: Product, index) => (
                     <ListItem key={index} name={product.name} line={product.line} deviceId={product.deviceId} details={product.details} />
                 ))}
             </div>

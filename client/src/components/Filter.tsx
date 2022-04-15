@@ -16,7 +16,7 @@ function Filter() {
     }
 
     const handleCheck = (event: React.ChangeEvent<HTMLInputElement>) => {
-        let storedFilters = [];
+        let storedFilters: string[] = [];
         if (window.localStorage.filters) {
             storedFilters = JSON.parse(window.localStorage.filters).terms;
         }

@@ -16,6 +16,4 @@
 
 - CSS is currently a mix between px and rem. It is better to stick to a single form of measurement.
 
-- Some buttons don't have a visual change on hover and active. (ex. exit button in Filter popup and back button on product page).
-
 - Backend needs to be tested!

@@ -22,6 +22,8 @@
 }
 
 .filter-popup__exit {
+    height: 1.3rem;
+    text-align: center;
     cursor: pointer;
     color: #595959;
     user-select: none;
@@ -29,6 +31,11 @@
     position: absolute;
     right: 1rem;
     top: 0.7rem;
+    width: 1.3rem;
+}
+
+.filter-popup__exit:hover {
+    font-weight: bold;
 }
 
 .filter-popup__body {

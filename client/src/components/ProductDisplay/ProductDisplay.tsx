@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import ListItem from './ListItem';
-import { useAppSelector, useAppDispatch } from '../hooks/hooks';
+import ListItem from '../ListItem/ListItem';
+import { useAppSelector, useAppDispatch } from '../../hooks/hooks';
 
 let allProducts: Product[] = [];
 
@@ -47,7 +47,7 @@ function List() {
 
     return (
         <>
-            <div className={state.format === 'list' ? 'list' : 'grid'}>
+            <div className={state.format === 'list' ? 'list' : 'grid'} data-testid='list'>
                 <div className={state.format === 'list' ? 'list-header' : 'hidden'}>
                     <p className='list-header__count'>{products.length || '0'} devices</p>
                     <h4 className='list-header__line'>PRODUCT LINE</h4>

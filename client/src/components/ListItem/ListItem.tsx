@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAppDispatch, useAppSelector } from '../hooks/hooks';
-import { setChosenProduct } from '../slices/slices';
+import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
+import { setChosenProduct } from '../../slices/slices';
 
 function ListItem({name,line, deviceId, details}: ListItemProps) {
   const state = useAppSelector(state => state.app);
@@ -26,9 +26,9 @@ function ListItem({name,line, deviceId, details}: ListItemProps) {
 
   return (
     <>
-      <div onClick={handleClick} className={state.format === 'list' ? 'list-item' : 'grid-item'}>
+      <div onClick={handleClick} className={state.format === 'list' ? 'list-item' : 'grid-item'} data-testid='list-item'>
         <div className={state.format === 'list' ? 'list-item__img' : 'grid-item__img'}>
-          <img src={imageUrl} />
+          <img src={imageUrl} data-testid='img' />
         </div>
         <p className={state.format === 'list' ? 'list-item__line' : 'hidden'}>{line}</p>
         <p className={state.format === 'list' ? 'list-item__name' : 'hidden'}>{name}</p>

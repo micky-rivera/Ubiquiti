@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="list-item"
+  data-testid="list-item"
+  onClick={[Function]}
+>
+  <div
+    className="list-item__img"
+  >
+    <img
+      data-testid="img"
+      src="https://static.ui.com/fingerprint/ui/icons/06a25b40-ef1f-463a-82d9-13236866ea3d_25x25.png"
+    />
+  </div>
+  <p
+    className="list-item__line"
+  >
+    test line
+  </p>
+  <p
+    className="list-item__name"
+  >
+    test product
+  </p>
+  <p
+    className="hidden"
+  >
+    test product
+  </p>
+  <p
+    className="hidden"
+  >
+    test line
+  </p>
+</div>
+`;

@@ -645,61 +645,75 @@ exports[`matches snapshot 1`] = `
     </div>
   </div>
   <div
-    className="list"
-    data-testid="list"
+    className=""
   >
     <div
-      className="list-header"
+      className="list"
+      data-testid="list"
     >
+      <div
+        className="list-header"
+      >
+        <p
+          className="list-header__count"
+        >
+          1
+           devices
+        </p>
+        <h4
+          className="list-header__line"
+        >
+          PRODUCT LINE
+        </h4>
+        <h4
+          className="list-header__name"
+        >
+          NAME
+        </h4>
+      </div>
       <p
-        className="list-header__count"
+        className="hidden"
       >
         1
          devices
       </p>
-      <h4
-        className="list-header__line"
-      >
-        PRODUCT LINE
-      </h4>
-      <h4
-        className="list-header__name"
-      >
-        NAME
-      </h4>
-    </div>
-    <p
-      className="hidden"
-    >
-      1
-       devices
-    </p>
-    <div
-      className="list-item"
-      data-testid="list-item"
-      onClick={[Function]}
-    >
       <div
-        className="list-item__img"
+        className="list-item"
+        data-testid="list-item"
+        onClick={[Function]}
       >
-        <img
-          data-testid="img"
-          src="https://static.ui.com/fingerprint/ui/icons/06a25b40-ef1f-463a-82d9-13236866ea3d_25x25.png"
+        <div
+          className="list-item__img"
+        >
+          <img
+            data-testid="img"
+            src="https://static.ui.com/fingerprint/ui/icons/06a25b40-ef1f-463a-82d9-13236866ea3d_25x25.png"
+          />
+        </div>
+        <p
+          className="list-item__line"
+        />
+        <p
+          className="list-item__name"
+        />
+        <p
+          className="hidden"
+        />
+        <p
+          className="hidden"
         />
       </div>
-      <p
-        className="list-item__line"
-      />
-      <p
-        className="list-item__name"
-      />
-      <p
-        className="hidden"
-      />
-      <p
-        className="hidden"
-      />
     </div>
+  </div>
+  <div
+    className="hidden"
+  >
+    <h2>
+      Oops! There was an issue fetching the products.
+    </h2>
+    <h3>
+      Please try again later.
+    </h3>
   </div>
 </div>
 `;

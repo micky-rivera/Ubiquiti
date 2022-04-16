@@ -8,7 +8,7 @@
 
 - There should be a loading bar displayed while pictures and whatnot are still being rendered.
 
-- 'Render' in index.tsx needs to be updated to createRoot for React 18. This is causing annoying warnings in the console and causing tests to look ugly while running.
+- 'Render' in index.tsx needs to be updated to createRoot for React 18. This is causing warnings in the console.
 
 - 'Filter' popup window should be closed when the user clicks outside of it.
 

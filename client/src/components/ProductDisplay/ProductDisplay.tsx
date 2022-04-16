@@ -3,6 +3,7 @@ import ListItem from '../ListItem/ListItem';
 import { useAppSelector, useAppDispatch } from '../../hooks/hooks';
 
 let allProducts: Product[] = [];
+const address = process.env.NODE_ENV === "development" ? "http://localhost:8080" : "";
 
 function List() {
     const dispatch = useAppDispatch();
@@ -29,7 +30,7 @@ function List() {
     }
 
     useEffect(()=> {
-        fetch('http://localhost:8080/api/all')
+        fetch(`${address}/api/all`)
         .then(res => res.json())
         .then(data => {
             allProducts = data;

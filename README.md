@@ -7,11 +7,21 @@ A simple website for viewing information about Ubiquiti's current products.
 Just clone this repo and install dependencies in both the client and server folder SEPERATELY using:
 
 ```bash
-npm install
+npm i
 ```
 
-## More Info
+Once dependencies finish installing, be sure to run both the backend server and frontend dev server SEPERATELY by running the following command in both folders:
 
-Test files for components can be found in the component's respective folder within src/components.
+```bash
+npm start
+```
+
+## Testing
+
+Test files for components can be found in the component's respective folder within src/components, and can be run using:
+
+```bash
+npm t
+```
 
 A long list of 'todos' can be found in the todos.md file for those wishing to continue this project.

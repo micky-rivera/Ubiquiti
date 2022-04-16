@@ -9,6 +9,7 @@ function List() {
     const dispatch = useAppDispatch();
     const state = useAppSelector(store => store.app);
     const [products, setproducts] = useState<Product[]>([{name: '', line: '', deviceId: '06a25b40-ef1f-463a-82d9-13236866ea3d', details: []}]);
+    const [notFound, setNotFound] = useState(false);
 
     const parseData = (data: Product[]) => {
         let searchTerm = '';
@@ -35,6 +36,10 @@ function List() {
         .then(data => {
             allProducts = data;
             setproducts(parseData(allProducts));
+            setNotFound(false);
+        })
+        .catch((err) => {
+            setNotFound(true);
         })
     }, [])
 
@@ -48,16 +53,22 @@ function List() {
 
     return (
         <>
-            <div className={state.format === 'list' ? 'list' : 'grid'} data-testid='list'>
-                <div className={state.format === 'list' ? 'list-header' : 'hidden'}>
-                    <p className='list-header__count'>{products.length || '0'} devices</p>
-                    <h4 className='list-header__line'>PRODUCT LINE</h4>
-                    <h4 className='list-header__name'>NAME</h4>
+            <div className={notFound ? 'hidden' : ''}>
+                <div className={state.format === 'list' ? 'list' : 'grid'} data-testid='list'>
+                    <div className={state.format === 'list' ? 'list-header' : 'hidden'}>
+                        <p className='list-header__count'>{products.length || '0'} devices</p>
+                        <h4 className='list-header__line'>PRODUCT LINE</h4>
+                        <h4 className='list-header__name'>NAME</h4>
+                    </div>
+                    <p className={state.format === 'grid' ? 'grid-header__count' : 'hidden'}>{products.length || '0'} devices</p>
+                    {products.map((product: Product, index) => (
+                        <ListItem key={index} name={product.name} line={product.line} deviceId={product.deviceId} details={product.details} />
+                    ))}
                 </div>
-                <p className={state.format === 'grid' ? 'grid-header__count' : 'hidden'}>{products.length || '0'} devices</p>
-                {products.map((product: Product, index) => (
-                    <ListItem key={index} name={product.name} line={product.line} deviceId={product.deviceId} details={product.details} />
-                ))}
+            </div>
+            <div className={notFound ? 'list__not-found' : 'hidden'}>
+                <h2>Oops! There was an issue fetching the products.</h2>
+                <h3>Please try again later.</h3>
             </div>
         </>
     );

@@ -70,6 +70,12 @@
     color: #595959;
 }
 
+.list__not-found {
+    text-align: center;
+    margin-top: 5rem;
+    color: #595959;
+}
+
 @media screen and (max-device-width: 650px) {
     .list-header {
         justify-content: space-evenly;

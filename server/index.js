@@ -5,7 +5,7 @@ const fetch = require('node-fetch');
 const app = express();
 app.use(cors());
 
-const addDetails = (data, device, deviceIndex) => {
+const addDetails = (device) => {
     const details = [];
 
     if(device.line.id !== 'Unknown') {
@@ -15,11 +15,11 @@ const addDetails = (data, device, deviceIndex) => {
     details.push({label: 'Short Name', content: device.shortnames[0]});
 
     try {
-        if (device.unifi.network.radios.na.maxPower) { //ADD UNITS TO DATA
-            details.push({label: 'Max. power', content: device.unifi.network.radios.na.maxPower});
+        if (device.unifi.network.radios.na.maxPower) {
+            details.push({label: 'Max. power', content: `${device.unifi.network.radios.na.maxPower}W`});
         }
         if (device.unifi.network.ethernetMaxSpeedMegabitsPerSecond) {
-            details.push({label: 'Speed', content: device.unifi.network.ethernetMaxSpeedMegabitsPerSecond});
+            details.push({label: 'Speed', content: `${device.unifi.network.ethernetMaxSpeedMegabitsPerSecond} Mbps`});
         }
         if (device.unifi.network.numberOfPorts) {
             details.push({label: 'Number of ports', content: device.unifi.network.numberOfPorts});
@@ -36,7 +36,7 @@ app.get('/api/all', (req,res) => {
     .then(res => res.json())
     .then(data => {
         const allProducts = [];
-        data.devices.forEach((device, index) => {
+        data.devices.forEach((device) => {
             let productLine;
             if (device.line.name === 'Unknown') {
                 productLine = device.product.name.split(' ')[0];
@@ -47,7 +47,7 @@ app.get('/api/all', (req,res) => {
                 line: productLine,
                 name: device.product.name,
                 deviceId: device.icon.id,
-                details: addDetails(data, device, index)
+                details: addDetails(device)
             });
         })
         shortenedList = allProducts.slice(0, 11);

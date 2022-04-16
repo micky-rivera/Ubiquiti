@@ -27,9 +27,7 @@ Array [
     <p
       className="product-page__title"
       data-testid="title"
-    >
-      Access Point Wifi Something idk
-    </p>
+    />
   </div>,
   <div
     className="product-page"
@@ -57,9 +55,7 @@ Array [
         </p>
         <p
           className="product-page__content"
-        >
-          Access Point Wifi Something idk
-        </p>
+        />
       </div>
       <div
         className="product-page__row"
@@ -71,23 +67,17 @@ Array [
         </p>
         <p
           className="product-page__content"
-        >
-          Ubiquiti Product
-        </p>
+        />
       </div>
       <div
         className="product-page__row"
       >
         <p
           className="product-page__label"
-        >
-          price
-        </p>
+        />
         <p
           className="product-page__content"
-        >
-          astronomic
-        </p>
+        />
       </div>
     </div>
   </div>,

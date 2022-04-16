@@ -5,12 +5,12 @@ const initialState: AppState = {
   productList: [{name: '', line: '', deviceId: '06a25b40-ef1f-463a-82d9-13236866ea3d', details: []}],
   format: 'list',
   chosenProduct: {
-    name: 'Access Point Wifi Something idk',
-    line: 'Ubiquiti Product',
+    name: '',
+    line: '',
     deviceId: '06a25b40-ef1f-463a-82d9-13236866ea3d',
     details: [{
-      label: 'price',
-      content: 'astronomic'
+      label: '',
+      content: ''
     }]
   },
   filters: []

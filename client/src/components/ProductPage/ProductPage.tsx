@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAppSelector } from '../../hooks/hooks';
 
@@ -13,6 +13,12 @@ function ProductPage() {
   const handleClick = () => {
     navigate('/');
   }
+
+  useEffect(() => {
+    if (state.chosenProduct.name === '') {
+        navigate('/');
+    }
+  }, [])
 
   return (
     <>

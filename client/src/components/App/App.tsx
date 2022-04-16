@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
-import Header from './components/Header/Header';
-import ProductDisplay from './components/ProductDisplay/ProductDisplay';
-import Nav from './components/Nav/Nav';
+import Header from '../Header/Header';
+import ProductDisplay from '../ProductDisplay/ProductDisplay';
+import Nav from '../Nav/Nav';
 import { Routes, Route } from 'react-router-dom';
-import ProductPage from './components/ProductPage/ProductPage';
-import { useAppSelector, useAppDispatch } from './hooks/hooks';
-import { setFilters, setFormat } from './slices/slices';
+import ProductPage from '../ProductPage/ProductPage';
+import { useAppSelector, useAppDispatch } from '../../hooks/hooks';
+import { setFilters, setFormat } from '../../slices/slices';
 
 function App() {
   const state = useAppSelector(state => state.app);

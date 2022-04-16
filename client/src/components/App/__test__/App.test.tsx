@@ -1,8 +1,8 @@
 import React from "react";
 import * as ReactDOM from "react-dom";
-import App from './App';
+import App from '../App';
 import { Provider } from 'react-redux'
-import {store} from './store/store'
+import {store} from '../../../store/store'
 import { render, cleanup } from "@testing-library/react";
 import TestRenderer from 'react-test-renderer';
 import { BrowserRouter } from 'react-router-dom'

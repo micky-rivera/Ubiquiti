@@ -1,7 +1,7 @@
 import React from 'react';
 import Form from './Form';
 import GridButton from './GridButton';
-import Filter from './Filter';
+import Filter from './Filter/Filter';
 import ListButton from './ListButton';
 
 function Nav() {

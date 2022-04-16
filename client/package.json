@@ -45,6 +45,9 @@
     ]
   },
   "devDependencies": {
+    "@types/react-test-renderer": "^18.0.0",
+    "jest-dom": "^4.0.0",
+    "react-test-renderer": "^18.0.0",
     "sass": "^1.50.0"
   }
 }

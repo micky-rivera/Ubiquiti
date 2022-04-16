@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { useAppDispatch, useAppSelector } from '../hooks/hooks';
-import { setFilters } from '../slices/slices';
+import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
+import { setFilters } from '../../slices/slices';
 
 function Filter() {
     const state = useAppSelector(state => state.app);
@@ -35,13 +35,13 @@ function Filter() {
 
   return (
     <>
-        <p onClick={handleClick} className="filter-btn">Filter</p>
+        <p onClick={handleClick} className="filter-btn" data-testid='filter-btn'>Filter</p>
         <div className={popUpOpen ? 'filter-popup' : 'hidden'}>
             <div className='filter-popup__header'>
                 <p className='filter-popup__title'>Filter</p>
                 <p onClick={handleClick} className='filter-popup__exit'>✕</p>
             </div>
-            <div className='filter-popup__body'>
+            <div className='filter-popup__body' data-testid='filter-popup__body'>
                 <p className='filter-popup__section-title'>Product Line</p>
                 <div className='filter-popup__option'>
                     <input className='filter-popup__checkbox' type='checkbox' id='UniFi' onChange={handleCheck} checked={state.filters.includes('UniFi')}/>

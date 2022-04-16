@@ -1,6 +1,6 @@
 import React from 'react';
-import { useAppDispatch, useAppSelector } from '../hooks/hooks';
-import { setFormat } from '../slices/slices';
+import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
+import { setFormat } from '../../slices/slices';
 
 function ListButton() {
     const state = useAppSelector(state => state.app);
@@ -16,7 +16,7 @@ function ListButton() {
   return (
     <>
         <div className={state.format === 'list' ? 'hidden' : 'list-btn'}>
-            <svg onClick={handleClick} className='list-btn__svg' width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg data-testid='btn-inactive' onClick={handleClick} className='list-btn__svg' width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <mask id="path-1-inside-1_20_31063" fill="white">
             <path fillRule="evenodd" clipRule="evenodd" d="M6.5 4.5C6.5 5.32843 5.82843 6 5 6C4.17157 6 3.5 5.32843 3.5 4.5C3.5 3.67157 4.17157 3 5 3C5.82843 3 6.5 3.67157 6.5 4.5ZM8.25 3.75H16.75C17.164 3.75 17.5 4.086 17.5 4.5C17.5 4.914 17.164 5.25 16.75 5.25H8.25C7.836 5.25 7.5 4.914 7.5 4.5C7.5 4.086 7.836 3.75 8.25 3.75ZM5 11.5C5.82843 11.5 6.5 10.8284 6.5 10C6.5 9.17157 5.82843 8.5 5 8.5C4.17157 8.5 3.5 9.17157 3.5 10C3.5 10.8284 4.17157 11.5 5 11.5ZM8.25 9.25H16.75C17.164 9.25 17.5 9.586 17.5 10C17.5 10.414 17.164 10.75 16.75 10.75H8.25C7.836 10.75 7.5 10.414 7.5 10C7.5 9.586 7.836 9.25 8.25 9.25ZM5 17C5.82843 17 6.5 16.3284 6.5 15.5C6.5 14.6716 5.82843 14 5 14C4.17157 14 3.5 14.6716 3.5 15.5C3.5 16.3284 4.17157 17 5 17ZM8.25 14.75H16.75C17.164 14.75 17.5 15.086 17.5 15.5C17.5 15.914 17.164 16.25 16.75 16.25H8.25C7.836 16.25 7.5 15.914 7.5 15.5C7.5 15.086 7.836 14.75 8.25 14.75Z"/>
             </mask>
@@ -24,7 +24,7 @@ function ListButton() {
             </svg>
         </div>
         <div className={state.format === 'list' ? 'list-btn' : 'hidden'}>
-            <svg onClick={handleClick} className='list-btn__svg' width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg data-testid='btn-active' onClick={handleClick} className='list-btn__svg' width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0.5 4C0.5 1.79086 2.29086 0 4.5 0H16.5C18.7091 0 20.5 1.79086 20.5 4V16C20.5 18.2091 18.7091 20 16.5 20H4.5C2.29086 20 0.5 18.2091 0.5 16V4Z" fill="#F6F6F8"/>
             <mask id="path-2-inside-1_20_31110" fill="white">
             <path fillRule="evenodd" clipRule="evenodd" d="M6.5 4.5C6.5 5.32843 5.82843 6 5 6C4.17157 6 3.5 5.32843 3.5 4.5C3.5 3.67157 4.17157 3 5 3C5.82843 3 6.5 3.67157 6.5 4.5ZM8.25 3.75H16.75C17.164 3.75 17.5 4.086 17.5 4.5C17.5 4.914 17.164 5.25 16.75 5.25H8.25C7.836 5.25 7.5 4.914 7.5 4.5C7.5 4.086 7.836 3.75 8.25 3.75ZM5 11.5C5.82843 11.5 6.5 10.8284 6.5 10C6.5 9.17157 5.82843 8.5 5 8.5C4.17157 8.5 3.5 9.17157 3.5 10C3.5 10.8284 4.17157 11.5 5 11.5ZM8.25 9.25H16.75C17.164 9.25 17.5 9.586 17.5 10C17.5 10.414 17.164 10.75 16.75 10.75H8.25C7.836 10.75 7.5 10.414 7.5 10C7.5 9.586 7.836 9.25 8.25 9.25ZM5 17C5.82843 17 6.5 16.3284 6.5 15.5C6.5 14.6716 5.82843 14 5 14C4.17157 14 3.5 14.6716 3.5 15.5C3.5 16.3284 4.17157 17 5 17ZM8.25 14.75H16.75C17.164 14.75 17.5 15.086 17.5 15.5C17.5 15.914 17.164 16.25 16.75 16.25H8.25C7.836 16.25 7.5 15.914 7.5 15.5C7.5 15.086 7.836 14.75 8.25 14.75Z"/>

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import Header from './components/Header';
+import Header from './components/Header/Header';
 import ProductDisplay from './components/ProductDisplay';
 import Nav from './components/Nav';
 import { Routes, Route } from 'react-router-dom';

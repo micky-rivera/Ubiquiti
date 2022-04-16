@@ -1,6 +1,6 @@
 import React from 'react';
-import { useAppSelector, useAppDispatch } from '../hooks/hooks';
-import { setFormat } from '../slices/slices';
+import { useAppSelector, useAppDispatch } from '../../hooks/hooks';
+import { setFormat } from '../../slices/slices';
 
 function GridButton() {
     const state = useAppSelector(state => state.app);

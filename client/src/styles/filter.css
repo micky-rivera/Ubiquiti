@@ -63,3 +63,9 @@
     color: #595959;
 }
 
+@media screen and (max-width: 550px) {
+    .filter-popup {
+        right: 0rem;
+        top: 0rem;
+    }
+}

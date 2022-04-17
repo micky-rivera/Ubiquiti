@@ -6,6 +6,6 @@
 
 - 'Filter' popup window should be closed when the user clicks outside of it.
 
-- CSS files should be moved to their component's respective folder. (and probably migrated to SASS).
+- CSS files should be moved to their component's respective folder.
 
-- CSS is currently a mix between px and rem. It is better to stick to a single form of measurement.
+- CSS is currently a mix between px and rem. It is probably better to stick to a single form of measurement.

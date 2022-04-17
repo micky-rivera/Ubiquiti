@@ -1,10 +1,10 @@
 # Code Excercise for Ubiquiti
 
-A simple website for viewing information about Ubiquiti's current products.
+A website for viewing information about Ubiquiti's current products.
 
-## Get Started
+## Getting Started
 
-Just clone this repo and install dependencies in both the client and server folder SEPERATELY using:
+Clone this repo and install dependencies in both the client and server folder SEPERATELY using:
 
 ```bash
 npm i
@@ -18,10 +18,12 @@ npm start
 
 ## Testing
 
-Test files for components can be found in the component's respective folder within src/components, and can be run using:
+Test files for components can be found in their respective folders within src/components, and can be run in client folder using:
 
 ```bash
 npm t
 ```
 
-A long list of 'todos' can be found in the todos.md file for those wishing to continue this project.
+There is also a test file in the server folder that can be run using the same command, but in the server directory instead of client directory.<br/>NOTE: The server must be terminated before you run the tests, or you'll get a big fat error.
+
+A list of 'todos' can be found in the todos.md file for those wishing to continue this project.

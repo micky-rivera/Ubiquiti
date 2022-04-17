@@ -1,0 +1,94 @@
+{
+    "unifi": {
+        "adoptability": "adoptable",
+        "network": {
+            "radios": {
+                "na": {
+                    "gain": 4,
+                    "maxPower": 25,
+                    "maxSpeedMegabitsPerSecond": 2400
+                },
+                "ng": {
+                    "gain": 3,
+                    "maxPower": 20,
+                    "maxSpeedMegabitsPerSecond": 300
+                }
+            },
+            "numberOfPorts": 1,
+            "ethernetMaxSpeedMegabitsPerSecond": 1000,
+            "systemIdHexadecimal": "a620",
+            "features": {
+                "outdoorModeSupport": true,
+                "bandsteer": true,
+                "ax": true,
+                "gen": 2,
+                "atfDisabled": true
+            },
+            "chipset": "c",
+            "type": "uap",
+            "minimumFirmwareRequired": "5.42.0",
+            "deviceCapabilities": [
+                "ACCESS_POINT"
+            ]
+        }
+    },
+    "icon": {
+        "resolutions": [
+            [
+                129,
+                129
+            ],
+            [
+                51,
+                51
+            ],
+            [
+                257,
+                257
+            ],
+            [
+                25,
+                25
+            ],
+            [
+                101,
+                101
+            ]
+        ],
+        "id": "06a25b40-ef1f-463a-82d9-13236866ea3d"
+    },
+    "line": {
+        "name": "UniFi",
+        "id": "unifi-network"
+    },
+    "guids": [
+        "03cb814b-0000-40df-9d6f-7c8271da8a89",
+        "892d0802-4ac4-429b-b937-d0e604ebdee7"
+    ],
+    "product": {
+        "abbrev": "U6 Pro",
+        "name": "Access Point WiFi 6 Pro"
+    },
+    "shortnames": [
+        "UAP6",
+        "UAP6MP"
+    ],
+    "triplets": [
+        {
+            "k2": "U6-Pro",
+            "k1": "UAP6"
+        },
+        {
+            "k2": "U6-Pro",
+            "k1": "UAP6MP"
+        },
+        {
+            "k3": "UAP6MP",
+            "k1": "UAP6MP"
+        },
+        {
+            "k3": "UAP6",
+            "k1": "UAP6"
+        }
+    ]
+}

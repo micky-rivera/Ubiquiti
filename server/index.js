@@ -8,7 +8,7 @@ app.use(cors());
 const addDetails = (device) => {
     const details = [];
 
-    if(device.line.id !== 'Unknown') {
+    if(device.line.id.toLowerCase() !== 'unknown') {
         details.push({label: 'ID', content: device.line.id});
     }
 
@@ -53,6 +53,9 @@ app.get('/api/all', (req,res) => {
         shortenedList = allProducts.slice(0, 11);
         return res.json(allProducts);
     })
+    .catch((err) => {
+        res.status(404).send('Not found');
+    })
 })
 
 app.get('/', async (req, res) => {
@@ -62,4 +65,5 @@ app.get('/', async (req, res) => {
 })
 
 module.exports.app = app;
+module.exports.addDetails = addDetails;
 app.listen(process.env.PORT || 8080);

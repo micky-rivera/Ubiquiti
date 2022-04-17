@@ -59,7 +59,7 @@
     color: #595959;
 }
 
-@media screen and (max-device-width: 670px) {
+@media screen and (max-width: 670px) {
     .product-page {
         margin-top: 2rem;
     }

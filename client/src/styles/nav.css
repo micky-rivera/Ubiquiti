@@ -106,13 +106,13 @@
     border-radius: 3px;
 }
 
-@media screen and (min-device-width: 551px) {
+@media screen and (min-width: 551px) {
     .search-form__clear-btn {
         left: 22rem;
     }
 }
 
-@media screen and (max-device-width: 550px) {
+@media screen and (max-width: 550px) {
     .nav-bar {
         display: flex;
         justify-content: center;

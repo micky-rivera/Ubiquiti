@@ -1,6 +1,7 @@
 # Code Excercise for Ubiquiti
 
-A website for viewing information about Ubiquiti's current products.
+A website for viewing information about Ubiquiti's current products.<br/>
+Available at: https://micky-ubiquiti.herokuapp.com/
 
 ## Getting Started
 
@@ -26,4 +27,4 @@ npm t
 
 There is also a test file in the server folder that can be run using the same command, but in the server directory instead of client directory.<br/>NOTE: The server must be terminated before you run the tests, or you'll get a big fat error.
 
-A list of 'todos' can be found in the todos.md file for those wishing to continue this project.
+A list of 'todos' can be found in the todo.md file for those wishing to continue this project.

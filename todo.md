@@ -1,6 +1,6 @@
 ## Things left to complete:
 
-- Ubiquiti logo should be an interactive button that navigates back to homepage. 'Hover' and 'active' svgs can be found on the project's Figma design.
+- Ubiquiti logo should have hover and active svgs from figma design.
 
 - There should be a loading bar displayed while pictures and whatnot are still being rendered.
 

@@ -408,6 +408,23 @@ exports[`matches snapshot 1`] = `
             <input
               checked={false}
               className="filter-popup__checkbox"
+              id="AirCube"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="filter-popup__label"
+              htmlFor="AirCube"
+            >
+              AirCube
+            </label>
+          </div>
+          <div
+            className="filter-popup__option"
+          >
+            <input
+              checked={false}
+              className="filter-popup__checkbox"
               id="EdgeMAX"
               onChange={[Function]}
               type="checkbox"

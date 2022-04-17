@@ -1,7 +1,5 @@
 ## Things left to complete:
 
-- List of products is currently prompted to render twice. Once on 'search' update, and once on 'filters' update. This should only prompt once.
-
 - Ubiquiti logo should be an interactive button that navigates back to homepage. 'Hover' and 'active' svgs can be found on the project's Figma design.
 
 - 'Filters' is currently not case insensitive. This is causing issues with the 'AirMAX' product line, since the database has both 'AirMAX' and 'airMAX'.

@@ -1,16 +1,17 @@
 import React from "react";
-import * as ReactDOM from "react-dom";
 import Filter from '../Filter';
 import { Provider } from 'react-redux'
 import {store} from '../../../store/store'
 import { render, cleanup } from "@testing-library/react";
 import TestRenderer from 'react-test-renderer';
+import { createRoot } from 'react-dom/client';
 
 afterEach(cleanup);
 
 it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<Provider store={store}><Filter /></Provider>, div)
+    const root = createRoot(div);
+    root.render(<Provider store={store}><Filter /></Provider>)
 })
 
 it('renders the button with the word "filter', () => {

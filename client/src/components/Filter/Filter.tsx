@@ -21,14 +21,14 @@ function Filter() {
             storedFilters = JSON.parse(window.localStorage.filters).terms;
         }
         if (event.target.checked === true) {
-            if (!state.filters.includes(event.target.id)) {
-                window.localStorage.setItem('filters', JSON.stringify({terms: [...storedFilters, event.target.id]}));
-                dispatch(setFilters([...state.filters, event.target.id]));
+            if (!state.filters.includes(event.target.id.toLowerCase())) {
+                window.localStorage.setItem('filters', JSON.stringify({terms: [...storedFilters, event.target.id.toLowerCase()]}));
+                dispatch(setFilters([...state.filters, event.target.id.toLowerCase()]));
             }
         } else {
-            if (state.filters.includes(event.target.id)) {
-                window.localStorage.setItem('filters', JSON.stringify({terms: [...storedFilters].filter(item => item !== event.target.id)}));
-                dispatch(setFilters([...state.filters].filter(item => item !== event.target.id)))
+            if (state.filters.includes(event.target.id.toLowerCase())) {
+                window.localStorage.setItem('filters', JSON.stringify({terms: [...storedFilters].filter(item => item !== event.target.id.toLowerCase())}));
+                dispatch(setFilters([...state.filters].filter(item => item !== event.target.id.toLowerCase())));
             }
         }
     }
@@ -44,91 +44,95 @@ function Filter() {
             <div className='filter-popup__body' data-testid='filter-popup__body'>
                 <p className='filter-popup__section-title'>Product Line</p>
                 <div className='filter-popup__option'>
-                    <input className='filter-popup__checkbox' type='checkbox' id='UniFi' onChange={handleCheck} checked={state.filters.includes('UniFi')}/>
+                    <input className='filter-popup__checkbox' type='checkbox' id='UniFi' onChange={handleCheck} checked={state.filters.includes('unifi')}/>
                     <label className='filter-popup__label' htmlFor='UniFi'>UniFi</label>
                 </div>
                 <div className='filter-popup__option'>
-                    <input className='filter-popup__checkbox' type='checkbox' id='UniFi LTE' onChange={handleCheck} checked={state.filters.includes('UniFi LTE')}/>
+                    <input className='filter-popup__checkbox' type='checkbox' id='UniFi LTE' onChange={handleCheck} checked={state.filters.includes('unifi lte')}/>
                     <label className='filter-popup__label' htmlFor='UniFi LTE'>UniFi LTE</label>
                 </div>
                 <div className='filter-popup__option'>
-                    <input className='filter-popup__checkbox' type='checkbox' id='UniFi LED' onChange={handleCheck} checked={state.filters.includes('UniFi LED')}/>
+                    <input className='filter-popup__checkbox' type='checkbox' id='UniFi LED' onChange={handleCheck} checked={state.filters.includes('unifi led')}/>
                     <label className='filter-popup__label' htmlFor='UniFi LED'>UniFi LED</label>
                 </div>
                 <div className='filter-popup__option'>
-                    <input className='filter-popup__checkbox' type='checkbox' id='UniFi Protect' onChange={handleCheck} checked={state.filters.includes('UniFi Protect')}/>
+                    <input className='filter-popup__checkbox' type='checkbox' id='UniFi Protect' onChange={handleCheck} checked={state.filters.includes('unifi protect')}/>
                     <label className='filter-popup__label' htmlFor='UniFi Protect'>UniFi Protect</label>
                 </div>
                 <div className='filter-popup__option'>
-                    <input className='filter-popup__checkbox' type='checkbox' id='UniFi Access' onChange={handleCheck} checked={state.filters.includes('UniFi Access')}/>
+                    <input className='filter-popup__checkbox' type='checkbox' id='UniFi Access' onChange={handleCheck} checked={state.filters.includes('unifi access')}/>
                     <label className='filter-popup__label' htmlFor='UniFi Access'>UniFi Access</label>
                 </div>
                 <div className='filter-popup__option'>
-                    <input className='filter-popup__checkbox' type='checkbox' id='UniFi Talk' onChange={handleCheck} checked={state.filters.includes('UniFi Talk')}/>
+                    <input className='filter-popup__checkbox' type='checkbox' id='UniFi Talk' onChange={handleCheck} checked={state.filters.includes('unifi talk')}/>
                     <label className='filter-popup__label' htmlFor='UniFi Talk'>UniFi Talk</label>
                 </div>
                 <div className='filter-popup__option'>
-                    <input className='filter-popup__checkbox' type='checkbox' id='AirMAX' onChange={handleCheck} checked={state.filters.includes('AirMAX')}/>
+                    <input className='filter-popup__checkbox' type='checkbox' id='AirMAX' onChange={handleCheck} checked={state.filters.includes('airmax')}/>
                     <label className='filter-popup__label' htmlFor='AirMAX'>AirMAX</label>
                 </div>
                 <div className='filter-popup__option'>
-                    <input className='filter-popup__checkbox' type='checkbox' id='AirPrism' onChange={handleCheck} checked={state.filters.includes('AirPrism')}/>
+                    <input className='filter-popup__checkbox' type='checkbox' id='AirPrism' onChange={handleCheck} checked={state.filters.includes('airprism')}/>
                     <label className='filter-popup__label' htmlFor='AirPrism'>AirPrism</label>
                 </div>
                 <div className='filter-popup__option'>
-                    <input className='filter-popup__checkbox' type='checkbox' id='EdgeMAX' onChange={handleCheck} checked={state.filters.includes('EdgeMAX')}/>
+                    <input className='filter-popup__checkbox' type='checkbox' id='AirCube' onChange={handleCheck} checked={state.filters.includes('aircube')}/>
+                    <label className='filter-popup__label' htmlFor='AirCube'>AirCube</label>
+                </div>
+                <div className='filter-popup__option'>
+                    <input className='filter-popup__checkbox' type='checkbox' id='EdgeMAX' onChange={handleCheck} checked={state.filters.includes('edgemax')}/>
                     <label className='filter-popup__label' htmlFor='EdgeMAX'>EdgeMAX</label>
                 </div>
                 <div className='filter-popup__option'>
-                    <input className='filter-popup__checkbox' type='checkbox' id='SunMAX' onChange={handleCheck} checked={state.filters.includes('SunMAX')}/>
+                    <input className='filter-popup__checkbox' type='checkbox' id='SunMAX' onChange={handleCheck} checked={state.filters.includes('sunmax')}/>
                     <label className='filter-popup__label' htmlFor='SunMAX'>SunMAX</label>
                 </div>
                 <div className='filter-popup__option'>
-                    <input className='filter-popup__checkbox' type='checkbox' id='AirFiber' onChange={handleCheck} checked={state.filters.includes('AirFiber')}/>
+                    <input className='filter-popup__checkbox' type='checkbox' id='AirFiber' onChange={handleCheck} checked={state.filters.includes('airfiber')}/>
                     <label className='filter-popup__label' htmlFor='AirFiber'>AirFiber</label>
                 </div>
                 <div className='filter-popup__option'>
-                    <input className='filter-popup__checkbox' type='checkbox' id='UFiber' onChange={handleCheck} checked={state.filters.includes('UFiber')}/>
+                    <input className='filter-popup__checkbox' type='checkbox' id='UFiber' onChange={handleCheck} checked={state.filters.includes('ufiber')}/>
                     <label className='filter-popup__label' htmlFor='UFiber'>UFiber</label>
                 </div>
                 <div className='filter-popup__option'>
-                    <input className='filter-popup__checkbox' type='checkbox' id='LTU' onChange={handleCheck} checked={state.filters.includes('LTU')}/>
+                    <input className='filter-popup__checkbox' type='checkbox' id='LTU' onChange={handleCheck} checked={state.filters.includes('ltu')}/>
                     <label className='filter-popup__label' htmlFor='LTU'>LTU</label>
                 </div>
                 <div className='filter-popup__option'>
-                    <input className='filter-popup__checkbox' type='checkbox' id='AmpliFi' onChange={handleCheck} checked={state.filters.includes('AmpliFi')}/>
+                    <input className='filter-popup__checkbox' type='checkbox' id='AmpliFi' onChange={handleCheck} checked={state.filters.includes('amplifi')}/>
                     <label className='filter-popup__label' htmlFor='AmpliFi'>AmpliFi</label>
                 </div>
                 <div className='filter-popup__option'>
-                    <input className='filter-popup__checkbox' type='checkbox' id='mFi' onChange={handleCheck} checked={state.filters.includes('mFi')}/>
+                    <input className='filter-popup__checkbox' type='checkbox' id='mFi' onChange={handleCheck} checked={state.filters.includes('mfi')}/>
                     <label className='filter-popup__label' htmlFor='mFi'>mFi</label>
                 </div>
                 <div className='filter-popup__option'>
-                    <input className='filter-popup__checkbox' type='checkbox' id='UISP' onChange={handleCheck} checked={state.filters.includes('UISP')}/>
+                    <input className='filter-popup__checkbox' type='checkbox' id='UISP' onChange={handleCheck} checked={state.filters.includes('uisp')}/>
                     <label className='filter-popup__label' htmlFor='UISP'>UISP</label>
                 </div>
                 <div className='filter-popup__option'>
-                    <input className='filter-popup__checkbox' type='checkbox' id='UNMS' onChange={handleCheck} checked={state.filters.includes('UNMS')}/>
+                    <input className='filter-popup__checkbox' type='checkbox' id='UNMS' onChange={handleCheck} checked={state.filters.includes('unms')}/>
                     <label className='filter-popup__label' htmlFor='UISP'>UNMS</label>
                 </div>
                 <div className='filter-popup__option'>
-                    <input className='filter-popup__checkbox' type='checkbox' id='Smart' onChange={handleCheck} checked={state.filters.includes('Smart')}/>
+                    <input className='filter-popup__checkbox' type='checkbox' id='Smart' onChange={handleCheck} checked={state.filters.includes('smart')}/>
                     <label className='filter-popup__label' htmlFor='Smart'>Smart</label>
                 </div>
                 <div className='filter-popup__option'>
-                    <input className='filter-popup__checkbox' type='checkbox' id='SmartPower' onChange={handleCheck} checked={state.filters.includes('SmartPower')}/>
+                    <input className='filter-popup__checkbox' type='checkbox' id='SmartPower' onChange={handleCheck} checked={state.filters.includes('smartpower')}/>
                     <label className='filter-popup__label' htmlFor='SmartPower'>SmartPower</label>
                 </div>
                 <div className='filter-popup__option'>
-                    <input className='filter-popup__checkbox' type='checkbox' id='Security' onChange={handleCheck} checked={state.filters.includes('Security')}/>
+                    <input className='filter-popup__checkbox' type='checkbox' id='Security' onChange={handleCheck} checked={state.filters.includes('security')}/>
                     <label className='filter-popup__label' htmlFor='Security'>Security</label>
                 </div>
                 <div className='filter-popup__option'>
-                    <input className='filter-popup__checkbox' type='checkbox' id='Conference' onChange={handleCheck} checked={state.filters.includes('Conference')}/>
+                    <input className='filter-popup__checkbox' type='checkbox' id='Conference' onChange={handleCheck} checked={state.filters.includes('conference')}/>
                     <label className='filter-popup__label' htmlFor='Conference'>Conference</label>
                 </div>
                 <div className='filter-popup__option'>
-                    <input className='filter-popup__checkbox' type='checkbox' id='Ubiquiti' onChange={handleCheck} checked={state.filters.includes('Ubiquiti')}/>
+                    <input className='filter-popup__checkbox' type='checkbox' id='Ubiquiti' onChange={handleCheck} checked={state.filters.includes('ubiquiti')}/>
                     <label className='filter-popup__label' htmlFor='Ubiquiti'>Ubiquiti</label>
                 </div>
             </div>

@@ -23,7 +23,7 @@ function List() {
         if (searchTerm.length > 0 || filters.length > 0) {
             if (filters.length > 0) {
                 return data.filter((product: Product) => product.name.toLowerCase().includes(searchTerm.toLowerCase()))
-                .filter((product: Product) => filters.includes(product.line)); // need to make this case insensitive!
+                .filter((product: Product) => filters.includes(product.line.toLowerCase())); // need to make this case insensitive!
             }
             return data.filter((product: Product) => product.name.toLowerCase().includes(searchTerm.toLowerCase()));
         }

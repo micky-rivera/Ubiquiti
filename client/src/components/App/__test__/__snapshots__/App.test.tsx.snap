@@ -9,11 +9,13 @@ exports[`matches snapshot 1`] = `
     data-testid="header"
   >
     <svg
+      className="header__logo"
       data-testid="UI-logo"
       fill="none"
       height="56"
-      viewBox="0 0 57 56"
-      width="57"
+      onClick={[Function]}
+      viewBox="1 0 56 56"
+      width="56"
       xmlns="http://www.w3.org/2000/svg"
     >
       <rect

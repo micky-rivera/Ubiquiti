@@ -59,6 +59,12 @@
     color: #595959;
 }
 
+@media screen and (max-width: 818px) {
+    .product-page__img-container {
+        text-align: center;
+    }
+}
+
 @media screen and (max-width: 670px) {
     .product-page {
         margin-top: 2rem;
